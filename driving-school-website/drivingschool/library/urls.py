@@ -9,6 +9,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('add/',  views.add, name='add'),
     path('delete/<int:id>/', views.delete, name='delete'),
+    path('login/', views.login, name='login'),
+    path('signup/', views.signup, name='signup'),
 ]
 
 if settings.DEBUG:
