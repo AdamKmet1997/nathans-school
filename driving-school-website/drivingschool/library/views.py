@@ -23,3 +23,8 @@ def add(request):
         return HttpResponseRedirect(reverse(index))
 
     return render(request,"library/add_video.html")
+
+def delete(request,id):
+    video = Video.objects.get(id=id)
+    video.delete()
+    return HttpResponseRedirect(reverse(index))
