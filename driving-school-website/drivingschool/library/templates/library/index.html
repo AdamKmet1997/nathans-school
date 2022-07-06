@@ -1,0 +1,20 @@
+{% load embed_video_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<body>
+        {% for i in video %}
+            <div class="video-box">
+                <div class="video-box-title">
+                <h3>{{i.title}}</h3>
+                </div>
+                <div class="video-box-content">   
+                    {% video i.url '426x240' %} <br>    
+                </div>
+                <div class="video-box-description">
+                <p>{{i.description}}</p>
+          </div>
+        {% endfor%}
+	</body>
+</html> 
